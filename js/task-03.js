@@ -12,3 +12,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// let ul = document.getElementsByClassName("gallery")
+// let ul = document.getElementById("gallery")
+let ul = document.querySelector(".gallery")
+console.log(ul)
+
+for (let image of images) {
+  let li = document.createElement("li");
+  li.innerHTML = `<img src="${image.url}" alt="${image.alt}"/>`;
+  console.log(li)
+  ul.appendChild(li)
+}
